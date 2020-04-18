@@ -1,5 +1,5 @@
-import app from 'firebase/app';
 import 'firebase/auth';
+import app from 'firebase/app';
 
 
 const config = {
@@ -30,4 +30,5 @@ class Firebase {
     doPasswordUpdate = password =>
       this.auth.currentUser.updatePassword(password);
 }
+
 export default Firebase;
