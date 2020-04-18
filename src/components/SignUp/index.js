@@ -17,7 +17,9 @@ const INITIAL_STATE = {
 const SignUpPage = () => (
   <div>
     <h1>SignUp</h1>
-    <SignUpForm />
+    <div style={{border: '1px solid black;'}}>
+      <SignUpForm />
+    </div>
   </div>
 );
 class SignUpFormBase extends Component {
@@ -61,43 +63,44 @@ class SignUpFormBase extends Component {
       username === '';
 
     return (
-      <form onSubmit={this.onSubmit}>
-        <input
-          name="username"
-          value={username}
-          onChange={this.onChange}
-          type="text"
-          placeholder="Full Name"
-        />
-        <input
-          name="email"
-          value={email}
-          onChange={this.onChange}
-          type="text"
-          placeholder="Email Address"
-        />
-        <input
-          name="passwordOne"
-          value={passwordOne}
-          onChange={this.onChange}
-          type="password"
-          placeholder="Password"
-        />
-        <input
-          name="passwordTwo"
-          value={passwordTwo}
-          onChange={this.onChange}
-          type="password"
-          placeholder="Confirm Password"
-        />
+        <form onSubmit={this.onSubmit}>
+          <input
+            name="username"
+            value={username}
+            onChange={this.onChange}
+            type="text"
+            placeholder="Full Name"
+          />
+          <input
+            name="email"
+            value={email}
+            onChange={this.onChange}
+            type="text"
+            placeholder="Email Address"
+          />
+          <input
+            name="passwordOne"
+            value={passwordOne}
+            onChange={this.onChange}
+            type="password"
+            placeholder="Password"
+          />
+          <input
+            name="passwordTwo"
+            value={passwordTwo}
+            onChange={this.onChange}
+            type="password"
+            placeholder="Confirm Password"
+          />
 
-        <button disabled={isInvalid} type="submit">
-          Sign Up
-        </button>          
+          <button disabled={isInvalid} type="submit">
+            Sign Up
+          </button>          
 
-        {error && <p>{error.message}</p>}
+          {error && <p>{error.message}</p>}
 
-      </form>
+        </form>
+      //</div>
     );
   }
 
