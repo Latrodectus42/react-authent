@@ -17,7 +17,7 @@ const INITIAL_STATE = {
 const SignUpPage = () => (
   <div>
     <h1>SignUp</h1>
-    <div style={{border: '1px solid black;'}}>
+    <div>
       <SignUpForm />
     </div>
   </div>
