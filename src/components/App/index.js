@@ -15,6 +15,7 @@ import PasswordForgetPage from '../PasswordForget';
 
 import * as ROUTES from '../../constants/routes';
 
+// version DEV
 const App = () => (
   <Router>
     <div>
